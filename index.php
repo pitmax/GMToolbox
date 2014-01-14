@@ -1,4 +1,4 @@
 <?php
 	//Initialisation du projet
 ?>
-Des trucs affichÃ©s
+Des trucs affichés
