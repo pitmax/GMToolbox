@@ -1,0 +1,3 @@
+<?php
+	//Iniatilisation du projet
+?>
