@@ -1,5 +1,4 @@
 <?php
-	//Iniatilisation du projet
+	//Initialisation du projet
 ?>
-
 Des trucs affichés
