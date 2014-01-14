@@ -1,4 +1,8 @@
 <?php
-	//Initialisation du projet
+// Initialisation du projet
 ?>
-Des trucs affichés
+
+Des trucs affichÃ©s
+
+<?php
+echo "Jerry was there... " . date('d/m/Y H:i:s');
