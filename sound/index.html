@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Dream Sfx</title>
+<script type="text/javascript">
+  function setHTML (element, value){ document.getElementById(element).innerHTML = value; }
+  function addHTML (element, value){ document.getElementById(element).innerHTML += value; }
+  function getHTML (element){ return document.getElementById(element).innerHTML; }
+    
+  Player1  ='<object type="application/x-shockwave-flash" data="dewplayer-vol.swf" width="250" height="20" id="dewplayer" name="dewplayer">';
+  Player1 +='<param name="wmode" value="transparent" />';
+  Player1 +='<param name="movie" value="dewplayer.swf" />';
+  Player1 +='<param name="flashvars" value="mp3=';
+  Player2 ='&amp;autostart=1&amp;autoreplay=1&amp;volume='
+  Player3 ='" /></object>';
+  prevTO = null;
+
+  function musique (file, volume) { addHTML("zic",Player1+file+Player2+volume+Player3); }
+  function ambiance (file, volume, note) { addHTML("sfx1",note+"<br>"+Player1+file+Player2+volume+Player3+"<br>"); clearTimeout(prevTO); prevTO = setTimeout('addHTML("sfx2",getHTML("sfx1"));',10000); setHTML("sfx2","");}
+  function clear_musique () { setHTML("zic",""); }
+  function clear_ambiance () { setHTML("sfx1",""); setHTML("sfx2","");}
+  function clear_all () {clear_musique (); clear_ambiance ();}
+</script>
+</head>
+
+<body background="sfondovat.jpg">
+  <center><h1><u><i>Dream Sfx</i></u></h1></center>
+  <br /><br />
+  <a href='#' onclick='musique("musique/Death.mp3", 100)'>Hors scenar</a><br><br>
+  <table width=100%><tr><td>
+    <table border=1 width=100%>
+      <tr>
+        <td></td><td><b>Jour tranquille</b></td><td><b>Nuit Tranquille</b></td><td><b>Jour Angoissant</b></td><td><b>Nuit Angoissante</b></td><td><b>Combat</b></td>
+      </tr>
+      <tr>
+        <td><b>Ville</b></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_pl_marketday.mp3",50, "- Ville jour tranquille -")'>X</a> <a href='#' onclick='musique("musique/mus_theme_nwn.mp3", 100)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_pl_citynite.mp3",35, "- Ville nuit tranquille -")'>X</a> <a href='#' onclick='musique("musique/mus_citydocknite.mp3", 100)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_pl_slumday1.mp3",40, "- Ville jour angoissant -")'>X</a> <a href='#' onclick='musique("musique/mus_gendungeon1.mp3", 100)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_pl_slumnite.mp3",40, "- Ville nuit angoissante -")'>X</a> <a href='#' onclick='musique("musique/mus_bat_city2.mp3", 40)'>M</a></td>
+        <td><a href='#' onclick='musique("musique/mus_bat_aribeth.mp3", 80, "- Ville combat -")'>M</a></td>
+      </tr>
+      <tr>
+        <td><b>Interieur</b></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_cv_houseamb1.mp3",60, "- Interieur jour tranquille -")'>X</a> <a href='#' onclick='musique("musique/mus_store.mp3", 100)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_cv_houseamb2.mp3",60, "- Interieur nuit tranquille -")'>X</a> <a href='#' onclick='musique("musique/mus_richhouse.mp3", 70)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_cv_hauntamb2.mp3",60, "- Interieur jour angoissant -")'>X</a> <a href='#' onclick='musique("musique/mus_cityslumnite.mp3", 70)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_cv_hauntamb3.mp3",40, "- Interieur nuit angoissante -")'>X</a> <a href='#' onclick='musique("musique/mus_theme_chap2.mp3", 80)'>M</a></td>
+        <td><a href='#' onclick='musique("musique/mus_bat_forboss.mp3", 50, "- Interieur combat -")'>M</a></td>
+      </tr>
+      <tr>
+        <td><b>Auberge</b></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_pl_tavhubbub2.mp3",60, "- Auberge jour tranquille -")'>X</a> <a href='#' onclick='musique("musique/mus_tavern1.mp3", 50)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_pl_whispers.mp3",60, "- Auberge nuit tranquille -")'>X</a> <a href='#' onclick='musique("musique/mus_tavern2.mp3", 80)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_pl_tavhubbub1.mp3",40, "- Auberge jour angoissant -")'>X</a> <a href='#' onclick='musique("musique/mus_cityslumday.mp3", 80)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_pl_bordello2.mp3",40, "- Auberge nuit angoissante -")'>X</a> <a href='#' onclick='musique("musique/mus_theme_chap1.mp3", 80)'>M</a></td>
+        <td><a href='#' onclick='musique("musique/mus_bat_city1.mp3", 60, "- Auberge combat -")'>M</a></td>
+      </tr>
+      <tr>
+        <td><b>Foret</b></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_na_frstdyamb2.mp3",40, "- Foret jour tranquille -")'>X</a> <a href='#' onclick='musique("musique/mus_forestday1.mp3", 70)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_na_frstntamb1.mp3",40, "- Foret nuit tranquille -")'>X</a> <a href='#' onclick='musique("musique/mus_forestnite.mp3", 70)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_na_frstdyscr1.mp3",40, "- Foret jour angoissant -")'>X</a> <a href='#' onclick='musique("musique/mus_forestday2.mp3", 70)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_na_frstntscr1.mp3",40, "- Foret nuit angoissante -")'>X</a> <a href='#' onclick='musique("musique/mus_ruralnite.mp3", 70)'>M</a></td>
+        <td><a href='#' onclick='musique("musique/mus_bat_forest1.mp3", 70, "- Foret combat -")'>M</a></td>
+      </tr>
+      <tr>
+        <td><b>Plaine</b></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_na_frstdyamb1.mp3",40, "- Plaine jour tranquille -")'>X</a> <a href='#' onclick='musique("musique/mus_ruralday1.mp3", 100)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_na_frstntamb1.mp3",40, "- Plaine nuit tranquille -")'>X</a> <a href='#' onclick='musique("musique/mus_citydockday.mp3", 60)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_na_frstdyscr1.mp3",40, "- Plaine jour angoissant -")'>X</a> <a href='#' onclick='musique("musique/mus_crypt2.mp3", 100)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_na_frstntscr1.mp3",40, "- Plaine nuit angoissante -")'>X</a> <a href='#' onclick='musique("musique/mus_ruralnite.mp3", 100)'>M</a></td>
+        <td><a href='#' onclick='musique("musique/mus_bat_rural1.mp3", 100, "- Plaine combat -")'>M</a></td>
+      </tr>
+      <tr>
+        <td><b>Desert</b></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_wt_windsoft1.mp3",40, "- Desert jour tranquille -")'>X</a> <a href='#' onclick='musique("musique/mus_dd_shadowgua.mp3", 100)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_wt_windsoft1.mp3",30, "- Desert nuit tranquille -")'>X</a> <a href='#' onclick='musique("musique/Song\ Of\ Complaint.mp3", 100)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_wt_windsoft1.mp3",20, "- Desert jour angoissant -")'>X</a> <a href='#' onclick='musique("musique/mus_theme_chap4.mp3", 100)'>M</a></td>
+        <td>idem jour</td>
+        <td><a href='#' onclick='musique("musique/mus_bat_dung3.mp3", 100, "- Desert combat -")'>M</a></td>
+      </tr>
+      <tr>
+        <td><b>Montagne</b></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_wt_windsoft1.mp3",30, "- Montagne jour tranquille -")'>X</a> <a href='#' onclick='musique("musique/mus_ruralday2.mp3", 100)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_wt_windsoft1.mp3",30, "- Montagne nuit tranquille -")'>X</a> <a href='#' onclick='musique("musique/mus_citymarket.mp3", 100)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_wt_windsoft1.mp3",30, "- Montagne jour angoissant -")'>X</a> <a href='#' onclick='musique("musique/mus_mines2.mp3", 100)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_wt_windsoft1.mp3",30, "- Montagne nuit angoissante -")'>X</a> <a href='#' onclick='musique("musique/mus_theme_chap3.mp3", 60)'>M</a></td>
+        <td><a href='#' onclick='musique("musique/mus_bat_lizboss.mp3", 60, "- Montagne combat -")'>M</a></td>
+      </tr>
+      <tr>
+        <td><b>Grotte</b></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_cv_caveamb2.mp3",40, "- Grotte jour tranquille -")'>X</a> <a href='#' onclick='musique("musique/mus_mines1.mp3", 100)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_cv_caveamb3.mp3",60, "- Grotte nuit tranquille -")'>X</a> <a href='#' onclick='musique("musique/mus_citynite.mp3", 100)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_cv_cryptamb2.mp3",70, "- Grotte jour angoissant -")'>X</a> <a href='#' onclick='musique("musique/mus_sewer.mp3", 50)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_cv_cryptamb3.mp3",40, "- Grotte nuit angoissante -")'>X</a> <a href='#' onclick='musique("musique/mus_sewer.mp3", 100)'>M</a></td>
+        <td><a href='#' onclick='musique("musique/mus_bat_forest2.mp3", 70, "- Grotte combat -")'>M</a></td>
+      </tr>
+      <tr>
+        <td><b>Monde onirique</b></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_mg_airlab1.mp3",40, "- Monde onirique jour tranquille -")'>X</a> <a href='#' onclick='musique("musique/mus_templegood2.mp3", 40)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_mg_magicint4.mp3",40, "- Monde onirique nuit tranquille -")'>X</a> <a href='#' onclick='musique("musique/mus_templegood.mp3", 40)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_mg_pitcry1.mp3",20, "- Monde onirique jour angoissant -")'>X</a> <a href='#' onclick='musique("musique/mus_crypt1.mp3", 100)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_mg_pitcry1.mp3",40, "- Monde onirique nuit angoissante -")'>X</a> <a href='#' onclick='musique("musique/mus_templeevil.mp3", 50)'>M</a></td>
+        <td><a href='#' onclick='ambiance("ambiance/al_pl_templesday.mp3",40, "- Monde onirique combat -")'>X</a> <a href='#' onclick='musique("musique/mus_bat_dragon.mp3", 30)'>M</a></td>
+      </tr>
+    </table>
+  </td><td width=250>
+  <center>
+    <h2>Musique</h2>
+    <div id="zic"></div>
+    <br><br>
+    <h2>Ambiance</h2>
+    <div id="sfx1"></div>
+    <hr>
+    <div id="sfx2"></div>
+    <br><br>
+    <a href='#' onclick='clear_musique()'>plus musique</a><br>
+    <a href='#' onclick='clear_ambiance()'>plus ambiance</a><br>
+    <a href='#' onclick='clear_all()'>plus rien</a> 
+  </center>
+  </td></tr></table>
+  <br>
+  
+  <b>Vents:</b>
+  <a href='#' onclick='ambiance("ambiance/al_wt_windsoft1.mp3",100, "- Vents faible -")'>faible</a>----
+  <a href='#' onclick='ambiance("ambiance/al_wt_windmed1.mp3",100, "- Vents moyen -")'>moyen</a>----
+  <a href='#' onclick='ambiance("ambiance/al_wt_windstrng1.mp3",100, "- Vents fort -")'>fort</a>----
+  <a href='#' onclick='ambiance("ambiance/al_wt_windforst1.mp3",100, "- Vents en foret -")'>en foret</a>----
+  <a href='#' onclick='ambiance("ambiance/al_wt_gustgrass1.mp3",100, "- Vents en plaine -")'>en plaine</a>----
+  <a href='#' onclick='ambiance("ambiance/al_wt_gustchasm1.mp3",100, "- Vents en montagne -")'>en montagne</a>----
+  <a href='#' onclick='ambiance("ambiance/al_wt_gustcavrn1.mp3",100, "- Vents en caverne -")'>en caverne</a><br><br>
+  <b>Meteo:</b>
+  <a href='#' onclick='ambiance("ambiance/al_wt_rainlight1.mp3",100, "- Pluie faible -")'>pluie faible</a>----
+  <a href='#' onclick='ambiance("ambiance/al_wt_rainhard1.mp3",100, "- Pluie forte -")'>pluie forte</a>----
+  <a href='#' onclick='ambiance("ambiance/al_wt_stormlg1.mp3",100, "- Tempete faible -")'>tempete faible</a>----
+  <a href='#' onclick='ambiance("ambiance/al_wt_stormsm1.mp3",100, "- Tempete forte -")'>tempete forte</a><br><br>
+  <b>Lieu:</b>
+  <a href='#' onclick='ambiance("ambiance/al_pl_townday1.mp3",100, "- Camp calme -")'>camp calme</a>----
+  <a href='#' onclick='ambiance("ambiance/al_pl_townday2.mp3",100, "- Camp bruyant -")'>camp bruyant</a>----
+  <a href='#' onclick='ambiance("ambiance/al_pl_townnite.mp3",100, "- Camp de nuit -")'>camp de nuit</a>----
+  <a href='#' onclick='ambiance("ambiance/al_pl_blacksmith.mp3",100, "- Forge -")'>forge</a>----
+  <a href='#' onclick='ambiance("ambiance/al_pl_templesday.mp3",100, "- Monastère -")'>monastère</a><br><br>
+  <a href='#' onclick='ambiance("ambiance/al_mg_waterlab1.mp3",100, "- Laboratoire -")'>laboratoire</a><br><br>
+  <b>Evenements:</b>
+  <a href='#' onclick='ambiance("ambiance/al_pl_riot1.mp3",100, "- Emeute -")'>emeute</a>----
+  <a href='#' onclick='ambiance("ambiance/al_pl_combat1.mp3",100, "- Guerre -")'>guerre</a>----
+  <a href='#' onclick='ambiance("ambiance/al_pl_combat2.mp3",100, "- Guerre magique -")'>guerre magique</a>----
+  <a href='#' onclick='ambiance("ambiance/al_pl_riot2.mp3",100, "- Emeute de l&#146;interieur -")'>emeute de l'interieur</a>----
+  <a href='#' onclick='ambiance("ambiance/al_pl_combatmuf1.mp3",100, "- Guerre de l&#146;interieur -")'>guerre de l'interieur</a>----
+  <a href='#' onclick='ambiance("ambiance/al_pl_combatmuf2.mp3",100, "- Guerre magique de l&#146;interieur -")'>guerre magique de l'interieur</a><br><br>
+  <b>Autres:</b>
+  <a href='#' onclick='musique("musique/mus_bat_endboss.mp3",100, "- Combat epique -")'>Combat epique</a>
+  
+</body>
+</html>
