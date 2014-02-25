@@ -1,7 +1,8 @@
 <!DOCTYPE html> 
 <html> 
 	<head> 
-	<title>Dream Sfx</title> 
+	<title>Dream Sfx</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
     <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
