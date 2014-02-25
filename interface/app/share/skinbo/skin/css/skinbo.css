@@ -1,0 +1,688 @@
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Skin debug Clementine */
+#Clementine_debug_div {
+    border: solid #AAA 1px;
+    position: absolute;
+    right: 10px;
+    z-index: 999;
+}
+/* skinbo */
+html {
+    height: 100%;
+}
+body {
+    background: #F0F0F0 url(../images/bg-body.gif) repeat-y scroll left top;
+    font-family: Helvetica;
+    font-size: 13px;
+}
+a {
+    color: #532e64;
+}
+td a {
+    text-decoration: none;
+}
+td a:hover {
+    text-decoration: underline;
+}
+p {
+    line-height: 1.6em;
+    padding: 5px 0 10px;
+}
+.spacer {
+    clear: both;
+}
+
+#general {
+    background: transparent url(../images/bg-radial-gradient.gif) no-repeat fixed 230px top;
+}
+
+/* colonne de gauche */
+#left {
+    background: transparent url(../images/bg-left.gif) no-repeat scroll left top;
+    width: 230px;
+    height: 100%;
+    color: #fff;
+    left: 0;
+    position: absolute;
+    top: 0;
+    text-align: right;
+}
+.logo {
+    font-size: 24px;
+    width: 100%;
+    text-align: right;
+    margin: 20px 0 0 0;
+}
+.logo > a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding-right: 15px;
+}
+.logo > a:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 15px #FFF;
+}
+.logo > .langue {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+.logo > .langue a {
+    opacity: 0.5;
+}
+.logo > .langue a.active,
+.logo > .langue a:hover {
+    opacity: 1;
+}
+.deconnexion {
+    margin: 50px 0 0 0;
+    font-size: 11px;
+    text-align: right;
+}
+.deconnexion a {
+    color: #fff;
+    display: inline-block;
+    padding-right: 15px;
+}
+.deconnexion a:hover {
+    text-shadow: 0 0 5px #FFF;
+}
+#main-nav {
+    margin: 50px 0 0 0;
+    float: right;
+}
+#main-nav li {
+    width: 194px;
+    margin: 10px 0 0 0;
+}
+#main-nav li a {
+    display: block;
+    height: 23px;
+    background: transparent url(../images/li_menu_admin.png) no-repeat 0 0;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px 0 0;
+}
+#main-nav li a.current {
+    background: transparent url(../images/li_menu_admin.png) no-repeat 0 -33px;
+    color: #532e64;
+}
+#main-nav li ul li a {
+    display: block;
+    height: 15px;
+    background: none;
+    color: #fff;
+    padding: 0 15px 0 0;
+}
+#main-nav li ul li a:hover, #main-nav li ul li a.current {
+    background: none;
+    font-weight: bold;
+    text-shadow: 0 0 5px #532e64;
+    color: #FFF;
+}
+
+/* colonne de droite */
+#right {
+    margin: 0 30px 0 260px;
+    padding: 40px 0 0;
+}
+h1 {
+    color: #532e64;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0 0 30px;
+}
+
+
+/*************** Content Box ***************/
+
+.content-box {
+    border: 1px solid #ccc;
+    margin: 0 0 20px 0;
+    background: #fff;
+}
+
+.content-box-header {
+    background: #e5e5e5 url(../images/bg-content-box.gif) top left repeat-x;
+    margin-top: 1px;
+    height: 40px;
+}
+
+.content-box-header h3 {
+    padding: 12px 15px 10px;
+    float: left;
+    color: #532e64;
+}
+.column-right-content-box {
+    width: 38%;
+    float: right;
+}
+
+ul.content-box-tabs {
+    float: right;
+    padding: 12px 15px 0 0 !important;
+    margin: 0 !important;
+}
+.content-box-tools {
+    float: right;
+    padding: 10px 15px 0 0 !important;
+    margin: 0 !important;
+}
+
+ul.content-box-tabs li {
+    float: left;
+    margin: 0;
+    padding: 0 !important;
+    background-image: none !important;
+}
+
+ul.content-box-tabs li a {
+    color: #333;
+    padding: 8px 10px;
+    display: block;
+    margin: 1px;
+    border-bottom: 0;
+}
+
+ul.content-box-tabs li a:hover {
+    color: #57a000;
+}
+
+ul.content-box-tabs li a.current {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    margin: 0;
+}
+
+.content-box-content {
+    padding: 20px;
+    font-size: 13px;
+    border-top: 1px solid #ccc;
+}
+
+.column-left {
+    float:left;
+    width:60%;
+}
+.column-right-content-box  .column-right {
+    width: 100%;
+}
+.column-right {
+    float:right;
+    width:38%;
+}
+/************ Table ************/
+
+#right table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#right table thead th {
+    font-weight: bold;
+    font-size: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+#right tbody {
+    border-bottom: 1px solid #ddd;
+}
+
+#right tbody tr {
+    background: #fff;
+}
+
+#right tbody tr.alt-row {
+    background: #f3f3f3;
+}
+#right tbody tr.notrad {
+    background: #DF8F8F;
+}
+
+#right table td {
+    padding: 10px;
+    line-height: 1.3em;
+    text-align: left;
+}
+#right table.mceToolbar td {
+    padding: 0px;
+}
+#right table th {
+    padding: 10px;
+    line-height: 1.3em;
+    text-align: left;
+    color: #532e64;
+}
+
+/************ Shortcut Buttons ************/
+
+.shortcut-button {
+    border: 1px solid #ccc;
+    background: #f7f7f7 url(../images/shortcut-button-bg.gif) top left no-repeat;
+    display: block;
+    width: 120px;
+    margin: 0 0 20px 0;
+    text-decoration: none;
+}
+
+.shortcut-button span {
+    border: 1px solid #fff;
+    display: block;
+    padding: 15px 10px 15px 10px;
+    text-align: center;
+    color: #555;
+    font-size: 13px;
+    line-height: 1.3em;
+}
+
+.shortcut-button span img {
+    margin-bottom: 10px;
+    border: 0;
+}
+
+.shortcut-button:hover {
+    background: #fff;
+
+}
+
+.shortcut-button span:hover {
+    color: #57a000; 
+}
+
+ul.shortcut-buttons-set li {
+    float: left;
+    margin: 0 15px 0 0;
+    padding: 0 !important;
+    background: 0;
+}
+
+/*************** Forms ***************/
+
+form label, .form_titles {
+    display: block;
+    padding: 0 0 10px;
+    font-weight: bold;
+}
+
+form fieldset legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+form p small {
+    font-size: 0.75em;
+    color: #777;
+}
+
+
+form input,
+form input.text-input,
+form select,
+form textarea,
+form .wysiwyg {
+    padding: 6px;
+    font-size: 13px;
+    background: #fff url(../images/bg-form-field.gif) top left repeat-x;
+    border: 1px solid #d5d5d5;
+    color: #333;
+}
+
+.clementine_cms_page_params input,
+.clementine_cms_zone_params input,
+.clementine_cms_contenu_params input {
+    padding: 3px;
+    margin: 3px 0 0px 0;
+    width: 170px;
+}
+
+form .small-input {
+    width: 25% !important;
+}
+
+form .medium-input {
+    width: 50% !important;
+}
+
+form .large-input {
+    width: 97.5% !important;
+    font-size: 16px !important;
+    padding: 8px !important;
+}
+
+form textarea {
+    width: 97.5% !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form select {
+    padding: 4px;
+    background: #fff;
+}
+
+form input[type="checkbox"],
+form input[type="radio"] {
+    padding: 0;
+    background: none;
+    border: 0;
+}
+
+#formulaire_visu {
+    width: 20px;
+    float: left;
+}
+
+/*************** Notifications ***************/
+
+.notification {
+    position: relative;
+    margin: 0 0 15px 0;
+    padding: 0;
+    border: 1px solid;
+    background-position: 10px 11px !important;
+    background-repeat: no-repeat !important;
+    font-size: 13px;
+    width: 99.8%;
+}
+
+
+.attention {
+    background: #fffbcc url(../images/icons/exclamation.png) 10px 11px no-repeat;
+    border-color: #e6db55;
+    color: #666452;
+}
+
+.information {
+    background: #dbe3ff url(../images/icons/information.png);
+    border-color: #a2b4ee;
+    color: #585b66;
+}
+
+.success {
+    background: #d5ffce url(../images/icons/tick_circle.png);
+    border-color: #9adf8f;
+    color: #556652;
+}
+
+.error {
+    background: #ffcece url(../images/icons/cross_circle.png);
+    border-color: #df8f8f;
+    color: #665252;
+}
+
+.notification div {
+    display: block;
+    font-style: normal;
+    padding: 10px 10px 10px 36px;
+    line-height: 1.5em;
+}
+
+.notification .close {
+    color: #990000;
+    font-size: 9px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+/* Notification for form inputs */
+
+.input-notification {
+    background-position: left 2px;
+    background-repeat: no-repeat;
+    padding: 2px 0 2px 22px;
+    background-color: transparent;
+    margin: 0 0 0 5px;
+}
+
+/* Notification for login page */
+
+#login-wrapper #login-content .notification {
+    border: 0;
+    background-color: #141414;
+    color: #fff !important;
+}
+
+.button,
+#main-content table tfoot td .bulk-actions select,
+.pagination a.number,
+form input.text-input,
+form textarea,
+form .wysiwyg,
+form select,
+.dp-popup {
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.content-box,
+.content-box-header,
+ul.content-box-tabs li a.current,
+.shortcut-button,
+.notification {
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.content-box-header {
+    -moz-border-radius-bottomleft: 0;
+    -moz-border-radius-bottomright: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -webkit-border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.closed-box .content-box-header {
+    -moz-border-radius-bottomleft: 6px;
+    -moz-border-radius-bottomright: 6px;
+    -webkit-border-bottom-left-radius: 6px;
+    -webkit-border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+ul.content-box-tabs li a.current {
+    -moz-border-radius-bottomleft: 0;
+    -moz-border-radius-bottomright: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -webkit-border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+.shortcut-button span {
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+}
+
+/* skin du module users */
+div.form_users_create .col_submit,
+div.form_users_edit .col_submit {
+    display: none;
+}
+div.form_users_index a.form_users_index_add {
+    display: none;
+}
+
+/* skin gestion de contenus */
+.contenus_index_list .col2 {
+    width: 250px;
+}
+.clementine_users_index .col_actions,
+.pages_index_list .col3,
+.contenus_index_list .col3 {
+    width: 100px;
+}
+
+.reset_field {
+    display: inline-block; 
+    width: 16px;
+    height: 16px;
+    text-indent: -9999px;
+    cursor: pointer;
+    background: transparent url(../images/icons/edit-undo.png) no-repeat scroll 0 0;
+}
+#clementine_cms_contenu_nom {
+    width: 100%;
+}
+#clementine_cms_contenu_date_lancement,
+#clementine_cms_contenu_date_arret {
+    cursor: pointer;
+    width: 100px;
+}
+
+#clementine_cms_contenus_params .col2,
+#clementine_cms_contenus_params .col3 {
+    width: 135px;
+}
+
+.clementine_cms_contenu_params_wrapper,
+.clementine_cms_page_params_wrapper,
+.clementine_cms_zone_params_wrapper {
+    width: 420px;
+    padding-bottom: 1em;
+}
+
+.zones_list_disabled {
+    display: none;
+}
+
+.reservations_index_lists{
+    text-align:center;
+    border-bottom:1px solid #D5D5D5;
+    height:18px;
+}
+
+.reservations_index_lists td{
+    vertical-align:middle;
+}
+
+.reservations_index_lists .col1{
+    width:90px;
+}
+
+.reservations_index_lists .col2{
+    width:60px;
+}
+
+.reservations_index_lists .col3{
+    width:120px;
+}
+
+.reservations_index_lists .col4{
+    width:115px;
+}
+
+.reservations_index_lists .col5{
+    width:50px;
+}
+
+.reservations_index_lists .col5 div{
+    width:16px;
+    height:16px;
+    border:none;
+    padding:0;
+}
+
+.euro{
+    display:none;
+}
+
+/* présentation propre des listes de termes et définitions */
+dl dt,
+dl dd {
+    margin: 0 0.5em 0 0;
+    font-weight: bold;
+    line-height: 1.6em;
+}
+dl dt {
+    padding: 0 0 0 15px;
+}
+dl dt:before {
+    content: "";
+}
+dl {
+    margin: 1em 0;
+}
+dl dt {
+    float: left;
+    clear: both;
+    font-weight: bold;
+}
+dl dt:before {
+    content: "• ";
+}
+dl dt:after {
+    content: " : ";
+}
+dl dd {
+    font-weight: normal;
+}
+
+.nav-top-item:after {
+    content: " ›";
+}
+
+.nav-top-item.no-submenu:after {
+    content: "";
+}

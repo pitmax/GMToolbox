@@ -1,0 +1,67 @@
+.dataTables_wrapper {
+    position: relative;
+}
+.dataTables_wrapper,
+.clementine-dataTables {
+    margin-top: 4em;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover,
+.clementine-dataTables > thead > tr > th.sorting_asc:hover,
+.clementine-dataTables > thead > tr > th.sorting_desc:hover,
+.clementine-dataTables > thead > tr > th.sorting:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.dataTables_wrapper .dataTables_length {
+    position: absolute;
+    left: 0;
+    margin-top: -3em;
+}
+.dataTables_wrapper .dataTables_filter {
+    position: absolute;
+    right: 0;
+    margin-top: -3em;
+}
+.dataTables_wrapper .dataTables_paginate,
+.dataTables_wrapper .dataTables_info {
+    text-align: center;
+    padding: 0.5em 0 1em;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_active,
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 0.5em;
+    border-left: 1px solid #EEE;
+    border-bottom: 1px solid #EEE;
+    border-top: 1px solid #EEE;
+}
+
+.dataTables_wrapper .dataTables_paginate .last {
+    border-right: 1px solid #EEE;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: #DDD;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_active {
+    background: #EEE;
+}
+
+.dataTables_wrapper .dataTables_processing {
+    position: absolute;
+    top: 26px;
+    bottom: 42px;
+    width: 80%;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    margin: 0 10%;
+    text-align: center;
+    background-color: white;
+    background-color: rgba(255,255,255,0.9);
+    background-image: url(loader.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: solid #AAA 2px;
+    border-radius: 10px;
+    text-indent: -99999px;
+}

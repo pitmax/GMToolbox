@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule ^.*\.ini ../../../index.php [L]
+RewriteRule ^skin/js/ckeditor/config.js skin/js/ckeditor/config_js.php [NC,L]
+RewriteRule ^skin/js/ckeditor/plugins/templates/templates/default.js skin/js/ckeditor/templates_js.php [NC,L]

@@ -1,0 +1,27 @@
+#pageNavPosition {
+    text-align:center;
+    margin:5px 0 0;
+                padding: 20px 0 5px 0;
+                font-family: Verdana, Arial, Helvetica, sans-serif;
+                font-size: 10px;
+                }
+#pageNavPosition  span {
+                margin: 0 5px 0 0;
+                padding: 3px 6px;
+                cursor:pointer;
+                float: left;
+                }
+
+#pageNavPosition  span.pg-normal {
+				border: 1px solid #ddd;
+                }
+
+#pageNavPosition  span.pg-selected {
+                background: #469400 url('../images/bg-button-green.gif') top left repeat-x !important;
+                border-color: #459300 !important;
+                color: #fff !important;
+                }
+				
+#pageNavPosition  span.pg-selected:hover {
+				text-decoration: underline;
+                }

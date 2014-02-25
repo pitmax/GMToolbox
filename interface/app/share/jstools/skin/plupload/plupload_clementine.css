@@ -1,0 +1,24 @@
+.clementine_crud-form .plupload_disabled {
+    opacity: 0.3 !important;
+    -moz-opacit: 0.3 !important;
+    -ms-filter: "alpha(opacity=30)" !important; /* IE 8 */
+    filter: alpha(opacity=30) !important; /* IE < 8 */
+}
+/* pour IE7 */
+.clementine_crud-form {
+    position: relative;
+    z-index: 1;
+}
+/* consequences sur anytime */
+div.AnyTime-win {
+    z-index: 1;
+}
+/* pour fonctionner mieux sous IE */
+.clementine_crud-plupload_container {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.clementine_crud-plupload_container > form {
+    z-index: -1 !important;
+}
