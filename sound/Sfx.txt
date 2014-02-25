@@ -1,0 +1,1 @@
+<object type="application/x-shockwave-flash" data="dewplayer-mini.swf?mp3=ambiance/al_wt_windsoft1.mp3" width="20" height="20" id="dewplayer-mini"><param name="flashvars" value="autostart=1&amp;autoreplay=1&amp;volume=100" /><param name="wmode" value="transparent" /></object>
